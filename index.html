@@ -22,8 +22,23 @@
             height: 85px;
             padding: 5px 10%;
         }
-            
+        .icon{
+            font-size: 30px;
+            color: #f8f8f8;
+            display: flex;
+            width: 20%;
+            justify-content: space-between;
         }
+        .icon button{
+             background: none;
+             border: none;
+             padding: 0;
+            font: inherit;
+             cursor: pointer;
+         text-decoration: underline;
+         color: inherit;
+        }
+        
         body{
             background-color: #EFEDFF;
         }
@@ -32,7 +47,7 @@
         }
         .contenedor{
             width: 100%;
-            background: #EFEFF0;
+            background-color: #EFEFF0;
             height: 100vh;
             display: flex;
             justify-content: space-between;
@@ -74,7 +89,7 @@
              padding: 40px;
              background: #ECD5F6;
             width: 50%;
-            height: 500px;
+            height: 600px;
             margin: auto;
             text-align: left;
             color: #2F2E35;
@@ -94,79 +109,162 @@
            float: center;
         }
         .prog{
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            float: right;
-            right: 100px;
-            top: 330px;
-            position: absolute;
-
+            width: 115px;
+            height: 115px;
+            float: right;        
         }
         .img{
-            width: 130px;
-            height: 130px;
+            width: 115px;
+            height: 115px;
             float: right;
-            border-radius: 50%;
-            float: right;
-            right: 100px;
-            top: 590px;
-            position: absolute;
+            margin-top: 4px;
+  
+        }
+        .info button{
+             margin-top: 9px;
+            font-weight: 700;
+            color: #2F2E35;
+            padding: 9px 25px;
+            background-color: #EFEDFF;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease 0;
+        }
+        .info button:hover{
 
+            background-color: #ffff;
+            color: #7361E8;
+            transform: scale(1.1);
+        }
+         .contenedor button{
+            font-weight: 700;
+            color: #2F2E35;
+            padding: 9px 25px;
+            background-color: #EFEDFF;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease 0;
+        }
+        .contenedor button:hover{
 
+            background-color: #ffff;
+            color: #7361E8;
+            transform: scale(1.1);
+        }
+        .disp{
+            display: flex;
+            width: 90%;
+           margin: auto;
+            justify-content: space-between;
+        }
+        #mensaje{
+            font-size: 23px;
+        }
+        .oculto {
+      display: none;
+    }
+    #miDiv{
+        background-color: #EFEFF0;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        color: #C1BDC6;
+    }
+     #miDiv button{
+            font-weight: 700;
+            color: #2F2E35;
+            padding: 9px 25px;
+            background-color: #EFEDFF;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease 0;
+        }
+        #miDiv button:hover{
+
+            background-color: #ffff;
+            color: #7361E8;
+            transform: scale(1.1);
         }
     </style>
     <header class="header";">
         
       
             
-        <div ></div>
-            <h2>Daniel Me Estás Matando</h2>  
+       
+            <h2>Daniel Me Estás Matando</h2> 
+             <div class="icon"><button onclick="cambiarColor()"><i class="bi bi-moon-stars-fill"></i></button><button onclick="claro()"><i class="bi bi-brightness-high-fill"></i></button></div> 
     </header>
+      <body ; style="font-family:sans-serif ;">
+         <div id="miDiv">
+          <button onclick="escribirTexto()">Escribir en el div</button>
+      </div>
     <div class="contenedor">
-    <body ; style="font-family:sans-serif ;">
+  
        <div class="info">
-        <img src="https://ar.toneden.io/23822410/tracks/5939674?cache=1556143241117">
-        <center> <p style="font-size: 25PX;" class="tit"><b>¿QUIENES SON?</b></p></center><br>
-        <p>Daniel, Me Estás Matando nació en el 2018, compuesta por Daniel Zepeda e Iván de la Rioja, basándose en el lenguaje tradicional del bolero, los sublimes cromatismos románticos de Chopin,
-             la magia de los sintetizadores, los samplers y la psicodelia legendaria de Kubrick, en lo que ellos mismos definen como bolero-glam. 
+       
+        <img  id="Imagen" src="https://ar.toneden.io/23822410/tracks/5939674?cache=1556143241117">
+        <div class="disp"><button onclick="cambiarImagen()">Cambiar imagen</button>
+        <button onclick="regresar()">Regresar</button></div>
+        
+        <center> <p id="parrafo" style="font-size: 25PX;" class="tit"><b>¿QUIENES SON?</b></p></center><br>
+        <p id="texto">Daniel, Me Estás Matando nació en el 2018, compuesta por Daniel Zepeda e Iván de la Rioja, basándose en el lenguaje tradicional del bolero, los sublimes cromatismos románticos de Chopin,
+             la magia de los sintetizadores, los samplers y la psicodelia legendaria de Kubrick, en lo que ellos mismos definen como bolero-glam.
           
         </p>
         
-
-        <br>
+        <center><button onclick="cambiarTexto()">Cambiar Texto</button></center>
+        
        </div>
          
   
        <div class="container">
         <div class="cont">
          <center> <p style="font-size: 25PX;"class="tit"><b>Grandes Éxitos del Boleroglam, Vol. 2</b></p></center>
-       <p>
-       
-        <li>Lo hice, te dejé</li> 
-        <li>Mirarte</li>
-        <li>Soy</li>
-        <li>Te solté</li>
-        <li>El desprecio</li>
-        <li>Hace mucho tiempo</li>
-        </p>
-        <img src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f7/b2/70/f7b27056-8874-6ae9-aa44-0db0251cc47c/0.jpg/1200x1200bf-60.jpg" class="prog">
+      
+         <div class="disp">
+            <div>
+            <li>Lo hice, te dejé</li> 
+            <li>Mirarte</li>
+            <li>Soy</li>
+            <li>Te solté</li>
+            <li>El desprecio</li>
+            <li>Hace mucho tiempo</li>
+           </div>
+
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f7/b2/70/f7b27056-8874-6ae9-aa44-0db0251cc47c/0.jpg/1200x1200bf-60.jpg" class="prog">
+          </div>
        </div>
         <div class="cont">
          <center> <p style="font-size: 25PX;"class="tit"><b>Suspiros</b></p></center>
-         
-        <li>Diez pasos hacia ti</li> 
-        <li>Es verdad</li>
-        <li>Quisiera</li>
-        <li>Hay cosas</li>
-        <li>Fugate</li>
-        <li>¿Qué se siente que me gustes tanto?</li>
-        
-        <img src="https://www.lazonasucia.com/wp-content/uploads/2019/08/daniel-me-estas-matando.jpg" class="img">
+          <div class="disp">
+            <h2 id="mensaje">Hola mundo</h2>
+         <br>
+             <button id="boton"onclick="ocultarMensaje()">Ocultar mensaje</button>
         </div>
-           
-       </div>
+        <div class="disp">
+            <div>
+            <li>Diez pasos hacia ti</li> 
+            <li>Es verdad</li>
+            <li>Quisiera</li>
+            <li>Hay cosas</li>
+            <li>Fugate</li>
+            <li>¿Qué se siente que me gustes tanto?</li>
+            </div>
+            <img src="https://www.lazonasucia.com/wp-content/uploads/2019/08/daniel-me-estas-matando.jpg" class="img">
+        </div>
+
+      
     </div>
+</div>
+
+     
+ 
+  
+     <script type="text/javascript" src="animaciones.js"></script>
     </body>
 </html>
 </DOCTYPE>
